@@ -1,0 +1,698 @@
+ Command : uxshw upr exp upr=* vupr=* partage
+
+ TYPE  | upr
+
+ ITEMS | upr          : ADP0BANIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : Traitement ADPGSI BAN
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (  )
+       | inccon           : (  )
+       | rescon           : (
+                          condno       : 01
+                          res          : RES_ADPJBANIN_1
+                          pdate        : ( , , )
+                          mu           : same
+                          one
+                          expected
+                          nofatal
+                          attrib       : EXIST
+                          oper         : =
+                          value        :
+                          unlock
+                          qt1          : 0
+                          qt2          : 0
+                          verif
+
+                          condno       : 02
+                          res          : RES_ADPJBANIN_2
+                          pdate        : ( , , )
+                          mu           : same
+                          one
+                          expected
+                          nofatal
+                          attrib       : EXIST
+                          oper         : =
+                          value        :
+                          unlock
+                          qt1          : 0
+                          qt2          : 0
+                          verif
+                        )
+       | termins          : (  )
+       | formula          : ( =C01 AND =C02 )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+set resexe=0
+==================================================
+
+
+ TYPE  | upr
+
+ ITEMS | upr          : ADP0FILIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : Traitement ADPGSI Filiale
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (
+                          condno       : 02
+                          dep          : ADP9BANIN
+                          dtype        : a
+                          pdate        : ( , , )
+                          mu           : same
+                          sess         : any
+                          user         : any
+                          status       : completed
+                          all
+                          expected
+                          nofatal
+                        )
+       | inccon           : (  )
+       | rescon           : (
+                          condno       : 01
+                          res          : RES_ADPJFILIN
+                          pdate        : ( , , )
+                          mu           : same
+                          one
+                          expected
+                          nofatal
+                          attrib       : EXIST
+                          oper         : =
+                          value        :
+                          unlock
+                          qt1          : 0
+                          qt2          : 0
+                          verif
+                        )
+       | termins          : (  )
+       | formula          : ( =C01 AND =C02 )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+set resexe=0
+==================================================
+
+
+ TYPE  | upr
+
+ ITEMS | upr          : ADP9BANIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : Traitement ADPGSI BAN
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (  )
+       | inccon           : (  )
+       | rescon           : (  )
+       | termins          : (  )
+       | formula          : (  )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+set resexe=0
+==================================================
+
+
+ TYPE  | upr
+
+ ITEMS | upr          : ADP9FILIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : Traitement ADPGSI Filiale
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (  )
+       | inccon           : (  )
+       | rescon           : (  )
+       | termins          : (  )
+       | formula          : (  )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+set resexe=0
+==================================================
+
+
+ TYPE  | upr
+
+ ITEMS | upr          : ADP_BANIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : Traitement ADPGSI BAN
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (  )
+       | inccon           : (  )
+       | rescon           : (  )
+       | termins          : (  )
+       | formula          : (  )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+E:\Batches\ADPGSI\CMD\CMD_ADPGSI_CDC_BAN.cmd
+==================================================
+
+
+ TYPE  | upr
+
+ ITEMS | upr          : ADP_FILIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : Traitement ADPGSI Filiale
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (  )
+       | inccon           : (  )
+       | rescon           : (  )
+       | termins          : (  )
+       | formula          : (  )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+E:\Batches\ADPGSI\CMD\CMD_ADPGSI_CDC_FILIALE.cmd
+==================================================
+
+
+ TYPE  | upr
+
+ ITEMS | upr          : TRO_ALEIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : MAJ des profils utilisateurs
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (  )
+       | inccon           : (  )
+       | rescon           : (  )
+       | termins          : (  )
+       | formula          : (  )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+E:\Batches\iTrombiAdmin_AlertesJour\iTrombiAdmin_AlertesJour.cmd
+==================================================
+
+
+ TYPE  | upr
+
+ ITEMS | upr          : TRO9ALEIN
+       | vupr         : 000
+       | class        :
+       | clfil        :
+       | label        : MAJ des profils utilisateurs
+       | dom          : I
+       | appl         : U_
+       | upt          : CL_INT
+       | definfo      :
+       | defsev       : 0000
+       | retry        :
+       | fperiod      : d
+       | memo         : o
+       | nbper        : 0
+       | command      :
+       | execdir      :
+       | shell        :
+       | shellarg     :
+       | nointeractive
+       | incclass         : (  )
+       | successor        : (  )
+       | launchvar        : (  )
+       | depcon           : (  )
+       | inccon           : (  )
+       | rescon           : (  )
+       | termins          : (  )
+       | formula          : (  )
+       | maxdur       : (,)
+       | mindur       : (,)
+       | maxwdur      : (,)
+       | sap_xbp2         : (  )
+       | sap_xbp2_step    : (  )
+       | sap_xbp2_step_pr : (  )
+       | sap_xbp2_step_ar : (  )
+       | sap_pchain       : (  )
+       | sap_ipack        : (  )
+       | ftp_get          : (  )
+       | ftp_put          : (  )
+       | ejb              : (  )
+       | ejb_param        : (  )
+       | create_param     : (  )
+       | notify           : (  )
+       | upr_status       : (  )
+       | oapp_pgm         : (  )
+       | oapp_pgm_printop : (  )
+       | oapp_pgm_param    : (  )
+       | oapp_set         : (  )
+       | oapp_set_printop : (  )
+       | oapp_set_param   : (  )
+       | mssql            : (  )
+       | mssql_notif_email     : (  )
+       | mssql_notif_page      : (  )
+       | mssql_notif_netsend   : (  )
+       | mssql_notif_eventlog  : (  )
+       | mssql_step       : (  )
+       | mssql_step_adv   : (  )
+       | mssql_ref        : (  )
+       | rest        : (  )
+       | rest_header : (  )
+       | rest_urlprm : (  )
+       | rest_filprm : (  )
+       | rest_body   : (  )
+       | rest_status : (  )
+       | rest_output : (  )
+       | soap        : (  )
+       | soap_conf   : (  )
+       | soap_status : (  )
+       | soap_input  : (  )
+       | soap_output : (  )
+       | zos         : (  )
+       | zos_output  : (  )
+       | script       :
+
+==================================================
+set resexe=0
+==================================================
+

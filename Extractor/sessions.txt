@@ -1,0 +1,33 @@
+ Command : uxshw ses exp ses=* vses=* lst
+
+ TYPE  | ses
+
+ ITEMS | ses          : ADPJBANIN
+       | vses         : 000
+       | label        : Traitement ADPGSI BAN
+       | list         :
+                      | upr  : ADP0BANIN
+                      | upr  : ADP_BANIN
+                      | upr  : ADP9BANIN
+       |
+
+ TYPE  | ses
+
+ ITEMS | ses          : ADPJFILIN
+       | vses         : 000
+       | label        : Traitement ADPGSI Filiale
+       | list         :
+                      | upr  : ADP0FILIN
+                      | upr  : ADP_FILIN
+                      | upr  : ADP9FILIN
+       |
+
+ TYPE  | ses
+
+ ITEMS | ses          : TROJALEIN
+       | vses         : 000
+       | label        : MAJ des profils utilisateurs
+       | list         :
+                      | upr  : TRO_ALEIN
+                      | upr  : TRO9ALEIN
+       |
